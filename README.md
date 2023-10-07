@@ -24,8 +24,8 @@ Java Enterprise Online Project
 ### 26.05: Старт проекта
 - Начало проверки [вступительного задания](https://github.com/JavaOPs/topjava#-Домашнее-задание-hw0)
 
-####  31.05 Дедлайн на сдачу HW0
-### 02.06: 1-е занятие
+####  31.05 [Дедлайн на сдачу HW0](https://github.com/Lissenok88/topjava/blob/master/doc/entrance.md)
+### 02.06: [1-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson01.md)
 ####  03.06 Дедлайн подачи заявки на [дипломную программу](https://javaops.ru/view/register/diploma)
 - Разбор домашнего задания вступительного занятия (вместе с Optional)
 - Обзор используемых в проекте технологий. Интеграция ПО
@@ -35,7 +35,7 @@ Java Enterprise Online Project
 - Уровни и зависимости логгирования. JMX
 - Домашнее задание 1-го занятия (HW1 + Optional)
 
-### 09.06: 2-е занятие
+### 09.06: [2-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson02.md)
 - Разбор домашнего задания HW1 + Optional
 - Библиотека vs Фреймворк. Стандартные библиотеки Apache Commons, Guava
 - Слои приложения. Создание каркаса приложения
@@ -43,7 +43,7 @@ Java Enterprise Online Project
 - Пояснения к HW2. Обработка Autowired
 - Домашнее задание (HW2 + Optional)
 
-### 16.06: 3-е занятие
+### 16.06: [3-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson03.md)
 - Разбор домашнего задания HW2 + Optional
 - Жизненный цикл Spring контекста
 - Тестирование через JUnit
@@ -56,7 +56,7 @@ Java Enterprise Online Project
 - Логирование тестов
 - Домашнее задание (HW3 + Optional)
 
-### 23.06: 4-е занятие
+### 23.06: [4-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson04.md)
 - Разбор домашнего задания HW3 + Optional
 - Методы улучшения качества кода
 - Spring: инициализация и популирование DB
@@ -66,7 +66,7 @@ Java Enterprise Online Project
 - Домашнее задание (HW4 + Optional)
 #### Начало выполнения [выпускного проекта](https://github.com/JavaOPs/topjava/blob/master/graduation.md)
 
-### 30.06: 5-е занятие
+### 30.06: [5-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson05.md)
 - Обзор JDK 9/17. Миграция Topjava с 1.8 на 17
 - Разбор вопросов
 - Разбор домашнего задания HW4 + Optional
@@ -77,7 +77,7 @@ Java Enterprise Online Project
 - Spring кэш
 - Домашнее задание (HW5 + Optional)
 
-### 07.07: 6-е занятие
+### 07.07: [6-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson06.md)
 - Разбор домашнего задания HW5 + Optional
 - Кэш Hibernate
 - Spring Web
@@ -90,7 +90,7 @@ Java Enterprise Online Project
 
 #### Большое ДЗ + выпускной проект + начинаем [курс BootJava](https://javaops.ru/view/bootjava) + подтягиваем "хвосты".
 
-### 21.07: 7-е занятие
+### 21.07: [7-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson07.md)
 - Разбор домашнего задания HW6 + Optional
 - Автогенерация DDL по модели
 - Тестирование Spring MVC
@@ -101,7 +101,7 @@ Java Enterprise Online Project
 - Тестирование через SoapUi. UTF-8
 - Домашнее задание (HW7 + Optional)
 
-### 28.07: 8-е занятие
+### 28.07: [8-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson08.md)
 - Разбор домашнего задания HW7 + Optional
 - WebJars. jQuery и JavaScript frameworks
 - Bootstrap
@@ -110,7 +110,7 @@ Java Enterprise Online Project
 - Добавление Spring Security
 - Домашнее задание (HW8 + Optional)
 
-### 04.08: 9-е занятие
+### 04.08: [9-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson09.md)
 - Разбор домашнего задания HW8 + Optional
 - Spring Binding
 - Spring Validation
@@ -122,7 +122,7 @@ Java Enterprise Online Project
 - Cookie. Session
 - Домашнее задание (HW9 + Optional)
 
-### 11.08: 10-е занятие
+### 11.08: [10-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson10.md)
 - Разбор домашнего задания HW10 + Optional
 - Кастомизация JSON (@JsonView) и валидации (groups)
 - Рефакторинг: jQuery конверторы и группы валидации по умолчанию
@@ -135,7 +135,7 @@ Java Enterprise Online Project
 - Защита от межсайтовой подделки запросов (CSRF)
 - Домашнее задание (HW10)
 
-### 18.08: 11-е занятие
+### 18.08: [11-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson11.md)
 - Разбор домашнего задания HW10 + Optional
 - Локализация datatables, ошибок валидации
 - Защита от XSS (Cross Site Scripting)
@@ -147,7 +147,7 @@ Java Enterprise Online Project
 - Возможные доработки приложения
 - Домашнее задание по проекту: составление резюме
 
-### 22.08: Миграция на Spring-Boot
+### 22.08: [Миграция на Spring-Boot](https://github.com/Lissenok88/topjava/blob/master/doc/lesson12.md)
 - Основы Spring Boot. Spring Boot maven plugin
 - Lombok, база H2, ApplicationRunner
 - Spring Data REST + HATEOAS
