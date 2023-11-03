@@ -1,157 +1,36 @@
-[![Codacy Badge](https://app.codacy.com/project/badge/Grade/bee16f3145654047a0505c62aeefd8a2)](https://www.codacy.com/gh/JavaWebinar/topjava/dashboard)
+Calories Management System project
+=================================
 
-Java Enterprise Online Project
-===============================
-Разработка полнофункционального Spring/JPA Enterprise приложения c авторизацией и правами доступа на основе ролей с использованием наиболее популярных инструментов и технологий Java: Maven, Spring MVC, Security, JPA(Hibernate), REST(Jackson), Bootstrap (css,js), datatables, jQuery + plugins, Java 8 Stream and Time API и хранением в базах данных Postgresql и HSQLDB.
+Java Enterprise project with registration / authorization and role-based access rights (USER, ADMIN). The administrator can create / edit / delete users, and users can manage their profile and data (food) via UI (via AJAX) and via REST interface with basic authorization.  
+For training purposes, various methods of storing information in relational databases were used: JPA (Hibernate), Spring Data JBDC, Spring Data JPA (Hibernate).
 
-![topjava_structure](https://user-images.githubusercontent.com/13649199/27433714-8294e6fe-575e-11e7-9c41-7f6e16c5ebe5.jpg)
+### Technology stack used:
+* Maven
+* Spring MVC
+* JPA (Hibernate)
+* Spring Data JBDC
+* Spring Data JPA (Hibernate)
+* Spring Security
+* Ehcache
+* REST (Jackson)
+* JUnit 5
+* JSP
+* JSTL
+* jQuery + plugins
+* DataTables
+* Bootstrap 4
+* OpenAPI 2
 
-    Когда вы слышите что-то, вы забываете это.
-    Когда вы видите что-то, вы запоминаете это.
-    Но только когда вы начинаете делать это,
-    вы начинаете понимать это
+### Project key logic:
+* System main purpose: users register in the application, after which it becomes possible for them to enter information about the food eaten and the number of calories it contains.
+* There are 2 types of users: admins, authorized users.
+* Authorized users can create/update/delete meals. Also, they can manage their profile and change their password.
+* If the number of calories consumed exceeds the set daily value, the entered food will be highlighted in red.
+* Admins have the same capabilities as authorized users. Moreover, they can create/update/block/delete users.
 
-    Старинная китайская поговорка
+### Caching strategy
+#### Spring caching (Ehcache provider):
+- Get all users (singleNonExpiryCache, evicts when create/update/enable/delete any user)
 
-## <a href="http://topjava.herokuapp.com/" target=_blank>Демо разрабатываемого приложения</a>
-
-- [Вступительное занятие](https://github.com/JavaOPs/topjava)
-- [Описание и план проекта](https://github.com/JavaOPs/topjava/blob/master/description.md)
-- [Wiki](https://github.com/JavaOPs/topjava/wiki)
-- [Wiki Git](https://github.com/JavaOPs/topjava/wiki/Git)
-- [Wiki IDEA](https://github.com/JavaOPs/topjava/wiki/IDEA)
-
-### 26.05: Старт проекта
-- Начало проверки [вступительного задания](https://github.com/JavaOPs/topjava#-Домашнее-задание-hw0)
-
-####  31.05 [Дедлайн на сдачу HW0](https://github.com/Lissenok88/topjava/blob/master/doc/entrance.md)
-### 02.06: [1-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson01.md)
-####  03.06 Дедлайн подачи заявки на [дипломную программу](https://javaops.ru/view/register/diploma)
-- Разбор домашнего задания вступительного занятия (вместе с Optional)
-- Обзор используемых в проекте технологий. Интеграция ПО
-- Maven
-- WAR. Веб-контейнер Tomcat. Сервлеты
-- Логирование
-- Уровни и зависимости логгирования. JMX
-- Домашнее задание 1-го занятия (HW1 + Optional)
-
-### 09.06: [2-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson02.md)
-- Разбор домашнего задания HW1 + Optional
-- Библиотека vs Фреймворк. Стандартные библиотеки Apache Commons, Guava
-- Слои приложения. Создание каркаса приложения
-- Обзор Spring Framework. Spring Context
-- Пояснения к HW2. Обработка Autowired
-- Домашнее задание (HW2 + Optional)
-
-### 16.06: [3-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson03.md)
-- Разбор домашнего задания HW2 + Optional
-- Жизненный цикл Spring контекста
-- Тестирование через JUnit
-- Spring Test
-- Базы данных. Обзор NoSQL и Java persistence solution без ORM
-- Установка PostgreSQL. Docker
-- Настройка Database в IDEA
-- Скрипты инициализации базы. Spring Jdbc Template
-- Тестирование UserService через AssertJ
-- Логирование тестов
-- Домашнее задание (HW3 + Optional)
-
-### 23.06: [4-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson04.md)
-- Разбор домашнего задания HW3 + Optional
-- Методы улучшения качества кода
-- Spring: инициализация и популирование DB
-- Подмена контекста при тестировании
-- ORM. Hibernate. JPA
-- Поддержка HSQLDB
-- Домашнее задание (HW4 + Optional)
-#### Начало выполнения [выпускного проекта](https://github.com/JavaOPs/topjava/blob/master/graduation.md)
-
-### 30.06: [5-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson05.md)
-- Обзор JDK 9/17. Миграция Topjava с 1.8 на 17
-- Разбор вопросов
-- Разбор домашнего задания HW4 + Optional
-- Транзакции
-- Профили Maven и Spring
-- Пул коннектов
-- Spring Data JPA
-- Spring кэш
-- Домашнее задание (HW5 + Optional)
-
-### 07.07: [6-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson06.md)
-- Разбор домашнего задания HW5 + Optional
-- Кэш Hibernate
-- Spring Web
-- JSP, JSTL, internationalization
-- Динамическое изменение профиля при запуске
-- Конфигурирование Tomcat через maven plugin. Jndi-lookup
-- Spring Web MVC
-- Spring Internationalization
-- Домашнее задание (HW6 + Optional)
-
-#### Большое ДЗ + выпускной проект + начинаем [курс BootJava](https://javaops.ru/view/bootjava) + подтягиваем "хвосты".
-
-### 21.07: [7-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson07.md)
-- Разбор домашнего задания HW6 + Optional
-- Автогенерация DDL по модели
-- Тестирование Spring MVC
-- Миграция на JUnit 5
-- Принципы REST. REST контроллеры
-- Тестирование REST контроллеров. Jackson
-- jackson-datatype-hibernate. Тестирование через матчеры
-- Тестирование через SoapUi. UTF-8
-- Домашнее задание (HW7 + Optional)
-
-### 28.07: [8-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson08.md)
-- Разбор домашнего задания HW7 + Optional
-- WebJars. jQuery и JavaScript frameworks
-- Bootstrap
-- AJAX. Datatables. jQuery
-- jQuery notifications plugin
-- Добавление Spring Security
-- Домашнее задание (HW8 + Optional)
-
-### 04.08: [9-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson09.md)
-- Разбор домашнего задания HW8 + Optional
-- Spring Binding
-- Spring Validation
-- Перевод DataTables на Ajax
-- Форма login / logout
-- Реализация собственного провайдера авторицазии
-- Принцип работы Spring Security. Проксирование
-- Spring Security Test
-- Cookie. Session
-- Домашнее задание (HW9 + Optional)
-
-### 11.08: [10-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson10.md)
-- Разбор домашнего задания HW10 + Optional
-- Кастомизация JSON (@JsonView) и валидации (groups)
-- Рефакторинг: jQuery конверторы и группы валидации по умолчанию
-- Spring Security Taglib. Method Security Expressions
-- Интерсепторы. Редактирование профиля. JSP tag files
-- Форма регистрации
-- Обработка исключений в Spring
-- Encoding password
-- Миграция на Spring 5
-- Защита от межсайтовой подделки запросов (CSRF)
-- Домашнее задание (HW10)
-
-### 18.08: [11-е занятие](https://github.com/Lissenok88/topjava/blob/master/doc/lesson11.md)
-- Разбор домашнего задания HW10 + Optional
-- Локализация datatables, ошибок валидации
-- Защита от XSS (Cross Site Scripting)
-- Обработка ошибок 404 (NotFound)
-- Доступ к AuthorizedUser
-- Ограничение модификации пользователей
-- Деплой [приложения в Heroku](http://topjava.herokuapp.com)
-- Собеседование. Разработка ПО
-- Возможные доработки приложения
-- Домашнее задание по проекту: составление резюме
-
-### 22.08: [Миграция на Spring-Boot](https://github.com/Lissenok88/topjava/blob/master/doc/lesson12.md)
-- Основы Spring Boot. Spring Boot maven plugin
-- Lombok, база H2, ApplicationRunner
-- Spring Data REST + HATEOAS
-- Миграция приложения подсчета калорий на Spring Boot
-
-### 11.09.22: Дедлайн на сдачу [выпускного проекта](https://github.com/JavaOPs/topjava/blob/master/graduation.md)
-### 21.09.22: Получение дипломов для участников [Дипломной программы](https://javaops.ru/view/register/diploma)
+#### Hibernate 2nd level cache:
+- User entity (CacheConcurrencyStrategy: NONSTRICT_READ_WRITE)
